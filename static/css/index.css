@@ -29,9 +29,8 @@
 }
 
 .container {
-    margin-left: 25%;
-    margin-right: 25%;
-    padding: 25px;
+    margin-left: 5%;
+    margin-right: 5%;
 }
 
 .hidden-icon{
@@ -85,12 +84,12 @@ body {
 
 h1 {
     font-family: "Prompt", sans-serif;
-    font-size: 40px;
+    font-size: 20px;
 }
 
 p {
     font-family: "Prompt", sans-serif;
-    font-size: 25px;
+    font-size: 10px;
     text-align: justify;
     text-justify: inter-word;
 }
@@ -106,21 +105,25 @@ a:hover{
 .un {
     display: inline-block;
     color: #680000;
-    font-weight: bold
-  }
-  
-.un::after {
-content: '';
-width: 0px;
-height: 1px;
-display: block;
-background: #680000	;
-transition: 500ms;
+    font-weight: bold;
+    position: relative;
 }
 
-.un:hover::after {
-width: 100%;
+.un::after {
+    content: '';
+    width: 0px;
+    height: 1px;
+    display: block;
+    background: #680000;
+    transition: 1000ms;
 }
+
+.un.active::after {
+    width: 100%;
+}
+
+
+
 img {
     transition: transform .3s; /* Animation */
 }

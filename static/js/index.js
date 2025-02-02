@@ -12,10 +12,14 @@ $(document).ready(function() {
         if (elemTop < scrollThreshold) {
             $(this).find('.hidden-text').addClass('show-text');
             $(this).find('.hidden-icon').addClass('show-icon');
+            setTimeout(() => {
+              $(this).find('.un').addClass('active');
+            }, 3000);
 
         } else {
             $(this).find('.hidden-text').removeClass('show-text');
-            $(this).find('.hidden-icon').removeClass('show-icon');          
+            $(this).find('.hidden-icon').removeClass('show-icon');
+            $(this).find('.un').removeClass('active');      
         }
   
       });
