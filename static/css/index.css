@@ -43,9 +43,10 @@
 
 .block-content{
     background-color:rgba(0, 0, 0, 0.6);
-    margin-bottom:500px;
-    margin-left: 20px;
-    margin-right: 20px;
+    margin-bottom:40vh;
+    /* margin-left: 1vh;
+    margin-right: 1vh; */
+    padding: 2vh;
     display: flex;
     align-items: center;
     /* justify-content: space-evenly; */
@@ -84,12 +85,12 @@ body {
 
 h1 {
     font-family: "Prompt", sans-serif;
-    font-size:40px;
+    font-size:10.3vw;
 }
 
 p {
     font-family: "Prompt", sans-serif;
-    font-size:15px;
+    font-size:3.9vw;
     text-align: justify;
     text-justify: inter-word;
 }
