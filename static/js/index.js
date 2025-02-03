@@ -92,13 +92,16 @@ window.onload = function() {
 };
 
 document.addEventListener("DOMContentLoaded", function () {
-  var source = "static/audio/videoplayback.m4a";
-  var audio = new Audio(source);
+    var source = "static/audio/videoplayback.m4a";
+    var audio = new Audio(source);
 
-  // Tente tocar o áudio após uma interação do usuário
-  document.body.addEventListener("click", function () {
-      audio.play().catch(error => {
-          console.log("Autoplay bloqueado pelo navegador:", error);
-      });
-  }, { once: true }); // Executa apenas no primeiro clique
+    // Adiciona o evento de clique aos elementos da classe "subtitle"
+    document.querySelectorAll(".subtitle").forEach(function (element) {
+        element.addEventListener("click", function () {
+            audio.currentTime = 0; // Reinicia o áudio
+            audio.play().catch(error => {
+                console.log("Autoplay bloqueado pelo navegador:", error);
+            });
+        });
+    });
 });
