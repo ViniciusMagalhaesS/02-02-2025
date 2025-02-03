@@ -1,6 +1,5 @@
 // ver animação de typing 
 // https://css-tricks.com/snippets/css/typewriter-effect/
-
 $(document).ready(function() {
     function checkVisibility() {
       var windowHeight = $(window).height();
@@ -91,3 +90,15 @@ window.onload = function() {
     css.innerHTML = ".typewrite > .wrap { border-right: 0.08em solid #fff}";
     document.body.appendChild(css);
 };
+
+document.addEventListener("DOMContentLoaded", function () {
+  var source = "static/audio/videoplayback.m4a";
+  var audio = new Audio(source);
+
+  // Tente tocar o áudio após uma interação do usuário
+  document.body.addEventListener("click", function () {
+      audio.play().catch(error => {
+          console.log("Autoplay bloqueado pelo navegador:", error);
+      });
+  }, { once: true }); // Executa apenas no primeiro clique
+});
